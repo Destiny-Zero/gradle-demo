@@ -1,0 +1,27 @@
+/**
+ * 解决 Execution failed for task ':gradle-core:bootJar 问题
+ * 引入 jar.enabled = true,bootJar.enabled = false
+ */
+jar.enabled = true
+bootJar.enabled = false
+
+/**
+ * 引入 gradle-core依赖
+ */
+dependencies {
+    //引入依赖的模块 gradle-utils
+    compile project(':gradle-utils')
+    //引入springboot starter
+    compile 'org.springframework.boot:spring-boot-starter'
+    //引入 springboot starter web
+    compile 'org.springframework.boot:spring-boot-starter-web'
+
+
+    /**32
+     * 引入lombok依赖
+     * gradle 4.7+配置 lombok 只使用 compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.6' 配置会出现找不到符号的错误 不生效
+     * gradle 4.7+配置 lombok 使用以下方式 需要以下两行
+     */
+    compileOnly 'org.projectlombok:lombok:1.18.6'
+    annotationProcessor 'org.projectlombok:lombok:1.18.6'
+}
