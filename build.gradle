@@ -72,7 +72,7 @@ allprojects {
 //    implementation 'org.springframework.boot:spring-boot-starter-web'
 //}
 /**
- * 引入所有子模块的配置，包括子模块gradle-core，gradle-web
+ * 引入所有子模块的配置，包括子模块gradle-core，gradle-utils
  */
 subprojects {
     //引入spring 依赖管理插件
