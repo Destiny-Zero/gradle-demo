@@ -51,6 +51,7 @@ buildscript {
 }
 /**
  * 引入所有模块的配置，包括父模块 gradle-demo，子模块gradle-core，gradle-utils
+ * allprojects 是对所有模块的配置，包括父模块
  */
 allprojects {
     //创建项目输入groupId
@@ -73,6 +74,7 @@ allprojects {
 //}
 /**
  * 引入所有子模块的配置，包括子模块gradle-core，gradle-utils
+ * subprojects 是对所有子模块的配置
  */
 subprojects {
     //引入spring 依赖管理插件
