@@ -20,12 +20,7 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-    /**
-     * getUserList()
-     * @author Leo
-     * @date 18:49 2019/5/22
-     * @return java.lang.String
-     **/
+
     @GetMapping("/list")
     public List<User> toList(){
         List<User> users = userService.getUserList();
